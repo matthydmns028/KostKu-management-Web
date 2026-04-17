@@ -1,0 +1,79 @@
+/* Laporan Page */
+.laporan-filter {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  padding: 15px;
+  background: transparent;
+  box-shadow: none;
+  align-items: center;
+  background-color: white;
+}
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+.filter-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+}
+.input-with-icon {
+  position: relative;
+}
+.input-with-icon input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 35px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #555;
+}
+.input-with-icon i {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  color: #999;
+}
+.action-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  transform: translateY(12px);
+}
+
+.border-green-left-thick {
+  border-left: 8px solid var(--color-green);
+}
+.total-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+.total-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.total-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.total-value {
+  font-size: 28px;
+  font-weight: 400;
+  color: #333;
+}
+.border-top-none th {
+  background: transparent;
+  padding: 20px;
+  border-bottom: 2px solid #eee;
+}
+.empty-state {
+  font-size: 14px;
+  background: #fff;
+  padding: 40px !important;
+}

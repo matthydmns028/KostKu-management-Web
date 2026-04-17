@@ -1,0 +1,38 @@
+/* Pengaduan Cards */
+.pengaduan-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.stat-card.border-orange-left {
+  border-left: 5px solid var(--color-orange);
+}
+.stat-card.border-blue-left {
+  border-left: 5px solid var(--color-blue);
+}
+.stat-card.border-green-left {
+  border-left: 5px solid var(--color-green);
+}
+.stat-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #777;
+}
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+.desc-text {
+  max-width: 250px;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+}

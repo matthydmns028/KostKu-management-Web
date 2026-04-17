@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KosKu Management - Pengaduan</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pengaduan.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <i class="fas fa-home"></i>
+        <h1>KosKu Management</h1>
+      </div>
+      <div class="navbar-user">
+        <i class="fas fa-user-circle"></i>
+        <span>admin</span>
+        <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
+      </div>
+    </header>
+
+    <div class="app-container">
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Menu Utama</h3>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="index.html"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="kamar.html"><i class="fas fa-door-closed"></i> Kamar</a>
+          </li>
+          <li>
+            <a href="penghuni.html"
+              ><i class="fas fa-users"></i> Data Penghuni</a
+            >
+          </li>
+          <li>
+            <a href="pembayaran.html"
+              ><i class="fas fa-money-bill-wave"></i> Pembayaran</a
+            >
+          </li>
+          <li class="active">
+            <a href="pengaduan.html"
+              ><i class="fas fa-exclamation-circle"></i> Pengaduan</a
+            >
+          </li>
+          <li>
+            <a href="laporan.html"><i class="fas fa-chart-bar"></i> Laporan</a>
+          </li>
+          <li>
+            <a href="user.html"
+              ><i class="fas fa-user-cog"></i> Manajemen User</a
+            >
+          </li>
+          <li>
+            <a href="notifikasi.html"><i class="fas fa-bell"></i> Notifikasi</a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header mt-4 mb-4">
+          <h2>Pengaduan</h2>
+        </div>
+
+        <div class="pengaduan-cards mb-5 mt-5">
+          <div class="card stat-card border-orange-left">
+            <span class="stat-label">Pengaduan Baru</span>
+            <h3 class="stat-value">0</h3>
+          </div>
+          <div class="card stat-card border-blue-left">
+            <span class="stat-label">Sedang Diproses</span>
+            <h3 class="stat-value">0</h3>
+          </div>
+          <div class="card stat-card border-green-left">
+            <span class="stat-label">Sudah Selesai</span>
+            <h3 class="stat-value">1</h3>
+          </div>
+        </div>
+
+        <div class="card table-card mt-5">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Tanggal</th>
+                <th>Penghuni</th>
+                <th>Kamar</th>
+                <th>Jenis Pengaduan</th>
+                <th>Deskripsi</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>29/11/2025</td>
+                <td>Penghuni</td>
+                <td>A-1</td>
+                <td>Fasilitas</td>
+                <td>
+                  <p class="desc-text text-muted">
+                    ac sudah tidak dingin dari 1 minggu lalu
+                  </p>
+                </td>
+                <td><span class="badge badge-selesai-bg">Selesai</span></td>
+                <td class="action-cell">
+                  <button class="btn btn-sm btn-proses mb-1">Proses</button>
+                  <button class="btn btn-sm btn-selesai-action">Selesai</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

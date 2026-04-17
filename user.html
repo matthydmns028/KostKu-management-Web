@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KosKu Management - Manajemen User</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="user.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <i class="fas fa-home"></i>
+        <h1>KosKu Management</h1>
+      </div>
+      <div class="navbar-user">
+        <i class="fas fa-user-circle"></i>
+        <span>admin</span>
+        <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
+      </div>
+    </header>
+
+    <div class="app-container">
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Menu Utama</h3>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="index.html"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="kamar.html"><i class="fas fa-door-closed"></i> Kamar</a>
+          </li>
+          <li>
+            <a href="penghuni.html"
+              ><i class="fas fa-users"></i> Data Penghuni</a
+            >
+          </li>
+          <li>
+            <a href="pembayaran.html"
+              ><i class="fas fa-money-bill-wave"></i> Pembayaran</a
+            >
+          </li>
+          <li>
+            <a href="pengaduan.html"
+              ><i class="fas fa-exclamation-circle"></i> Pengaduan</a
+            >
+          </li>
+          <li>
+            <a href="laporan.html"><i class="fas fa-chart-bar"></i> Laporan</a>
+          </li>
+          <li class="active">
+            <a href="user.html"
+              ><i class="fas fa-user-cog"></i> Manajemen User</a
+            >
+          </li>
+          <li>
+            <a href="notifikasi.html"><i class="fas fa-bell"></i> Notifikasi</a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <h2>Manajemen User</h2>
+          <button class="btn btn-primary-light">Tambah User</button>
+        </div>
+
+        <div class="tabs mb-4">
+          <button class="tab-btn active">Semua (Admin & Penghuni)</button>
+          <button class="tab-btn">Admin</button>
+          <button class="tab-btn">Penghuni</button>
+        </div>
+
+        <div class="card table-card table-user">
+          <table class="data-table small-text">
+            <thead>
+              <tr>
+                <th>USERNAME</th>
+                <th>NAMA</th>
+                <th>EMAIL</th>
+                <th>TELEPON</th>
+                <th>ROLE</th>
+                <th>AKSI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>admin</td>
+                <td>Administrator</td>
+                <td>admin@kosku.com</td>
+                <td>081234567890</td>
+                <td><span class="badge badge-admin">Admin</span></td>
+                <td class="action-cell">
+                  <button class="btn btn-sm btn-edit mb-1">Edit</button>
+                  <button class="btn btn-sm btn-hapus">Hapus</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Penghuni 2</td>
+                <td>Penghuni 2</td>
+                <td>josuaramaino@gmail.com</td>
+                <td>0823123</td>
+                <td><span class="badge badge-penghuni">Penghuni</span></td>
+                <td class="action-cell">
+                  <button class="btn btn-sm btn-edit mb-1">Edit</button>
+                  <button class="btn btn-sm btn-hapus">Hapus</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Penghuni</td>
+                <td>Penghuni</td>
+                <td>dearenkansil@gmail.com</td>
+                <td>089580</td>
+                <td><span class="badge badge-penghuni">Penghuni</span></td>
+                <td class="action-cell">
+                  <button class="btn btn-sm btn-edit mb-1">Edit</button>
+                  <button class="btn btn-sm btn-hapus">Hapus</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

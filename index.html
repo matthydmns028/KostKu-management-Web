@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KosKu Management - Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Top Navbar -->
+    <header class="navbar">
+      <div class="navbar-brand">
+        <i class="fas fa-home"></i>
+        <h1>KosKu Management</h1>
+      </div>
+      <div class="navbar-user">
+        <i class="fas fa-user-circle"></i>
+        <span>admin</span>
+        <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
+      </div>
+    </header>
+
+    <div class="app-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Menu Utama</h3>
+        <ul class="sidebar-menu">
+          <li class="active">
+            <a href="index.html"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="kamar.html"><i class="fas fa-door-closed"></i> Kamar</a>
+          </li>
+          <li>
+            <a href="penghuni.html"
+              ><i class="fas fa-users"></i> Data Penghuni</a
+            >
+          </li>
+          <li>
+            <a href="pembayaran.html"
+              ><i class="fas fa-money-bill-wave"></i> Pembayaran</a
+            >
+          </li>
+          <li>
+            <a href="pengaduan.html"
+              ><i class="fas fa-exclamation-circle"></i> Pengaduan</a
+            >
+          </li>
+          <li>
+            <a href="laporan.html"><i class="fas fa-chart-bar"></i> Laporan</a>
+          </li>
+          <li>
+            <a href="user.html"
+              ><i class="fas fa-user-cog"></i> Manajemen User</a
+            >
+          </li>
+          <li>
+            <a href="notifikasi.html"><i class="fas fa-bell"></i> Notifikasi</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="page-header">
+          <h2>Dashboard</h2>
+          <span class="date-text">Jumat, 28 November 2025</span>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="dashboard-cards">
+          <div class="card summary-card border-blue">
+            <div class="card-icon blue-icon"><i class="fas fa-home"></i></div>
+            <div class="card-info">
+              <span class="card-label">TOTAL KAMAR</span>
+              <h3 class="card-value">2</h3>
+              <span class="card-desc">Seluruh kamar di kos</span>
+            </div>
+          </div>
+          <div class="card summary-card border-green">
+            <div class="card-icon green-icon">
+              <i class="fas fa-door-open"></i>
+            </div>
+            <div class="card-info">
+              <span class="card-label">KAMAR TERISI</span>
+              <h3 class="card-value">2</h3>
+              <span class="card-desc">Sedang dihuni</span>
+            </div>
+          </div>
+          <div class="card summary-card border-orange">
+            <div class="card-icon orange-icon">
+              <i class="fas fa-door-closed"></i>
+            </div>
+            <div class="card-info">
+              <span class="card-label">KAMAR KOSONG</span>
+              <h3 class="card-value">0</h3>
+              <span class="card-desc">Tersedia untuk sewa</span>
+            </div>
+          </div>
+          <div class="card summary-card border-red">
+            <div class="card-icon red-icon">
+              <i class="fas fa-exclamation"></i>
+            </div>
+            <div class="card-info">
+              <span class="card-label">PEMBAYARAN TERTUNDA</span>
+              <h3 class="card-value">1</h3>
+              <span class="card-desc">Menunggu verifikasi</span>
+            </div>
+          </div>
+          <div class="card summary-card border-orange-light">
+            <div class="card-icon orange-light-icon">
+              <i class="fas fa-money-bill"></i>
+            </div>
+            <div class="card-info">
+              <span class="card-label">KAMAR BELUM BAYAR</span>
+              <h3 class="card-value">1</h3>
+              <span class="card-desc">Belum bayar bulan ini</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="section-header mt-4">
+          <h3>Pembayaran Terbaru</h3>
+          <button class="btn btn-primary">Lihat Semua</button>
+        </div>
+
+        <div class="card table-card">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Nama Penghuni</th>
+                <th>Kamar</th>
+                <th>Bulan</th>
+                <th>Jumlah</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Penghuni</td>
+                <td>A-1</td>
+                <td>November 2025</td>
+                <td>Rp 1.200.000,00</td>
+                <td><span class="badge badge-warning">Menunggu</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

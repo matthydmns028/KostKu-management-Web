@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KosKu Management - Pembayaran</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pembayaran.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <i class="fas fa-home"></i>
+        <h1>KosKu Management</h1>
+      </div>
+      <div class="navbar-user">
+        <i class="fas fa-user-circle"></i>
+        <span>admin</span>
+        <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
+      </div>
+    </header>
+
+    <div class="app-container">
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Menu Utama</h3>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="index.html"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="kamar.html"><i class="fas fa-door-closed"></i> Kamar</a>
+          </li>
+          <li>
+            <a href="penghuni.html"
+              ><i class="fas fa-users"></i> Data Penghuni</a
+            >
+          </li>
+          <li class="active">
+            <a href="pembayaran.html"
+              ><i class="fas fa-money-bill-wave"></i> Pembayaran</a
+            >
+          </li>
+          <li>
+            <a href="pengaduan.html"
+              ><i class="fas fa-exclamation-circle"></i> Pengaduan</a
+            >
+          </li>
+          <li>
+            <a href="laporan.html"><i class="fas fa-chart-bar"></i> Laporan</a>
+          </li>
+          <li>
+            <a href="user.html"
+              ><i class="fas fa-user-cog"></i> Manajemen User</a
+            >
+          </li>
+          <li>
+            <a href="notifikasi.html"><i class="fas fa-bell"></i> Notifikasi</a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <h2>Pembayaran</h2>
+        </div>
+
+        <div class="card table-card mt-2">
+          <table class="data-table small-text">
+            <thead>
+              <tr>
+                <th>ID TRANSAKSI</th>
+                <th>NAMA PENGHUNI</th>
+                <th>KAMAR</th>
+                <th>BULAN</th>
+                <th>TANGGAL BAYAR</th>
+                <th>JUMLAH</th>
+                <th>BUKTI</th>
+                <th>STATUS</th>
+                <th>AKSI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TRX-<br />356004</td>
+                <td>Penghuni</td>
+                <td>A-1</td>
+                <td>November<br />2025</td>
+                <td>28/11/2025</td>
+                <td>Rp 1.200.000</td>
+                <td><a href="#" class="link-bukti">Lihat</a></td>
+                <td><span class="badge badge-menunggu">Menunggu</span></td>
+                <td class="action-cell">
+                  <button class="btn btn-sm btn-setuju mb-1">Setuju</button>
+                  <button class="btn btn-sm btn-tolak">Tolak</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+.tab-btn {
+  padding: 8px 18px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+}
+.tab-btn.active {
+  background-color: var(--color-blue);
+  color: white;
+  border-color: var(--color-blue);
+}
