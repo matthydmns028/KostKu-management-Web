@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KosKu Management - Penghuni Pengaduan</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pengaduan.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <i class="fas fa-home"></i>
+        <h1>KosKu Management</h1>
+      </div>
+      <div class="navbar-user">
+        <i class="fas fa-user-circle"></i>
+        <span style="color: white; margin-right: 10px; font-weight: bold;">Penghuni</span>
+        <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
+      </div>
+    </header>
+
+    <div class="app-container">
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Menu Utama</h3>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="user-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+          </li>
+          <li>
+            <a href="user-pembayaran.html"><i class="fas fa-money-bill-wave"></i> Pembayaran</a>
+          </li>
+          <li class="active">
+            <a href="user-pengaduan.html"><i class="fas fa-exclamation-circle"></i> Pengaduan</a>
+          </li>
+          <li>
+            <a href="user-notifikasi.html"><i class="fas fa-bell"></i> Notifikasi</a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header" style="justify-content: space-between; align-items: center; margin-bottom: 25px;">
+          <h2>Pengaduan</h2>
+          <button class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Buat Pengaduan Baru</button>
+        </div>
+
+        <!-- Daftar Pengaduan -->
+        <div class="card" style="padding: 20px; border-left: 4px solid #ffc107; display: flex; justify-content: space-between; align-items: flex-start;">
+          <div>
+            <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #333;">AC tidak dingin</h4>
+            <p style="margin: 0 0 10px 0; color: #666; font-size: 0.95rem;">AC sudah tidak dingin dari 1 minggu lalu</p>
+            <p style="margin: 0; color: #aaa; font-size: 0.85rem;">29/11/2025</p>
+          </div>
+          <div>
+            <span style="background-color: #d1ecf1; color: #17a2b8; padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Baru</span>
+          </div>
+        </div>
+
+      </main>
+    </div>
+    
+    <script src="auth.js"></script>
+  </body>
+</html>

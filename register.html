@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+    <title>Sistem Manajemen Kos-Kosan - Daftar Akun</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="register.css" />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="login-body">
+    <div class="login-card">
+      <div class="login-header">
+        <i class="fas fa-user-plus login-icon"></i>
+        <h2>Buat Akun Baru</h2>
+      </div>
+      <form id="registerForm" class="login-form">
+        <div class="form-group">
+          <label for="namaLengkap">Nama Lengkap</label>
+          <input type="text" id="namaLengkap" placeholder="Masukkan nama" required />      
+        </div>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Buat username" required />      
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="role">Daftar Sebagai</label>
+          <select id="role" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;">
+            <option value="penghuni">Penghuni</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary login-btn">Daftar</button>
+        <div class="register-link" style="text-align: center; margin-top: 15px;">
+            <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
+        </div>
+      </form>
+    </div>
+  <script src="auth.js"></script></body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KosKu Management - Penghuni Pembayaran</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pembayaran.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <i class="fas fa-home"></i>
+        <h1>KosKu Management</h1>
+      </div>
+      <div class="navbar-user">
+        <i class="fas fa-user-circle"></i>
+        <span style="color: white; margin-right: 10px; font-weight: bold;">Penghuni</span>
+        <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
+      </div>
+    </header>
+
+    <div class="app-container">
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Menu Utama</h3>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="user-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+          </li>
+          <li class="active">
+            <a href="user-pembayaran.html"><i class="fas fa-money-bill-wave"></i> Pembayaran</a>
+          </li>
+          <li>
+            <a href="user-pengaduan.html"><i class="fas fa-exclamation-circle"></i> Pengaduan</a>
+          </li>
+          <li>
+            <a href="user-notifikasi.html"><i class="fas fa-bell"></i> Notifikasi</a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <h2>Pembayaran</h2>
+        </div>
+
+        <!-- Section Upload Bukti Pembayaran -->
+        <div class="card" style="margin-bottom: 2rem;">
+          <h3 style="margin-top: 0; margin-bottom: 20px; font-size: 1.1rem;">Upload Bukti Pembayaran</h3>
+          
+          <div class="form-group" style="margin-bottom: 15px;">
+            <label style="display: block; font-size: 0.85rem; color: #555; margin-bottom: 5px;">Bulan Pembayaran</label>
+            <select style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; background: #f9f9f9; color: #333;">
+              <option>November 2025</option>
+              <option>Desember 2025</option>
+              <option>Januari 2026</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 15px;">
+            <label style="display: block; font-size: 0.85rem; color: #555; margin-bottom: 5px;">Jumlah Pembayaran</label>
+            <input type="text" value="1200000" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;" readonly>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 25px;">
+            <label style="display: block; font-size: 0.85rem; color: #555; margin-bottom: 5px;">Bukti Transfer</label>
+            <div style="border: 2px dashed #ddd; border-radius: 8px; padding: 40px; text-align: center; cursor: pointer; background: #fff;">
+              <i class="fas fa-cloud-upload-alt" style="font-size: 2.5rem; color: #007bff; margin-bottom: 15px;"></i>
+              <p style="color: #007bff; margin: 0 0 5px 0;">Klik untuk upload bukti transfer</p>
+              <p style="color: #888; font-size: 0.8rem; margin: 0 0 10px 0;">Format: JPG, PNG, PDF (Maks. 5MB)</p>
+              <p style="color: #aaa; font-size: 0.8rem; margin: 0;">Belum ada file dipilih</p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" style="padding: 10px 20px; font-size: 0.95rem;">Kirim Bukti Pembayaran</button>
+        </div>
+
+        <!-- Section Riwayat Pembayaran -->
+        <h3 style="margin-bottom: 15px; font-size: 1.1rem;">Riwayat Pembayaran Saya</h3>
+        <div class="card table-card" style="padding: 0; overflow-x: auto;">
+          <table class="data-table" style="width: 100%; text-align: left; border-collapse: collapse;">
+            <thead>
+              <tr style="background: #f4f6f9;">
+                <th style="padding: 15px; font-size: 0.8rem; color: #555;">BULAN</th>
+                <th style="padding: 15px; font-size: 0.8rem; color: #555;">JUMLAH</th>
+                <th style="padding: 15px; font-size: 0.8rem; color: #555;">TANGGAL UPLOAD</th>
+                <th style="padding: 15px; font-size: 0.8rem; color: #555;">BUKTI</th>
+                <th style="padding: 15px; font-size: 0.8rem; color: #555;">STATUS</th>
+                <th style="padding: 15px; font-size: 0.8rem; color: #555;">KETERANGAN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 15px; font-size: 0.9rem;">November 2025</td>
+                <td style="padding: 15px; font-size: 0.9rem;">Rp 1200000.00</td>
+                <td style="padding: 15px; font-size: 0.9rem;">28/11/2025</td>
+                <td style="padding: 15px; font-size: 0.9rem;"><a href="#" style="color: #007bff; text-decoration: underline;">Lihat</a></td>
+                <td style="padding: 15px;">
+                  <span style="background-color: #d4edda; color: #28a745; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem;">Terverifikasi</span>
+                </td>
+                <td style="padding: 15px; font-size: 0.9rem;">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    
+    <script src="auth.js"></script>
+  </body>
+</html>

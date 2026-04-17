@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KosKu Management - Penghuni Notifikasi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="notifikasi.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <i class="fas fa-home"></i>
+        <h1>KosKu Management</h1>
+      </div>
+      <div class="navbar-user">
+        <i class="fas fa-user-circle"></i>
+        <span style="color: white; margin-right: 10px; font-weight: bold;">Penghuni</span>
+        <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
+      </div>
+    </header>
+
+    <div class="app-container">
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Menu Utama</h3>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="user-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+          </li>
+          <li>
+            <a href="user-pembayaran.html"><i class="fas fa-money-bill-wave"></i> Pembayaran</a>
+          </li>
+          <li>
+            <a href="user-pengaduan.html"><i class="fas fa-exclamation-circle"></i> Pengaduan</a>
+          </li>
+          <li class="active">
+            <a href="user-notifikasi.html"><i class="fas fa-bell"></i> Notifikasi</a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header" style="margin-bottom: 25px;">
+          <h2>Notifikasi</h2>
+        </div>
+
+        <div class="card table-card" style="padding: 0; overflow-x: auto;">
+          <table class="data-table" style="width: 100%; text-align: left; border-collapse: collapse;">
+            <thead>
+              <tr style="background: #f4f6f9;">
+                <th style="padding: 15px 20px; font-size: 0.85rem; color: #555; text-transform: capitalize;">Tanggal</th>
+                <th style="padding: 15px 20px; font-size: 0.85rem; color: #555; text-transform: capitalize;">Penerima</th>
+                <th style="padding: 15px 20px; font-size: 0.85rem; color: #555; text-transform: capitalize;">Pesan</th>
+                <th style="padding: 15px 20px; font-size: 0.85rem; color: #555; text-transform: capitalize;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 20px; font-size: 0.95rem; color: #666;">27/11/2025</td>
+                <td style="padding: 20px; font-size: 0.95rem; color: #666;">Kamar A-1</td>
+                <td style="padding: 20px; font-size: 0.95rem; color: #666;">Jangan Berisik</td>
+                <td style="padding: 20px; font-size: 0.95rem; color: #666;">sent</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </main>
+    </div>
+    
+    <script src="auth.js"></script>
+  </body>
+</html>

@@ -32,8 +32,21 @@ function initDB() {
       html_content TEXT
     )
   `, (err) => {
-    if (err) console.error("Gagal membuat tabel:", err.message);
+    if (err) console.error("Gagal membuat tabel page_data:", err.message);
     else console.log("Tabel 'page_data' siap.");
+  });
+
+  db.run(`
+    CREATE TABLE IF NOT EXISTS users (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      nama TEXT,
+      username TEXT UNIQUE,
+      password TEXT,
+      role TEXT
+    )
+  `, (err) => {
+    if (err) console.error("Gagal membuat tabel users:", err.message);
+    else console.log("Tabel 'users' siap.");
   });
 }
 
@@ -66,7 +79,42 @@ app.get('/api/load/:key', (req, res) => {
     res.json({ html: row ? row.html_content : null });
   });
 });
+// 3. API: Register Account
+app.post('/api/register', (req, res) => {
+  const { nama, username, password, role } = req.body;
+  if (!nama || !username || !password || !role) {
+    return res.status(400).json({ error: "Semua field harus diisi." });
+  }
 
+  const sql = `INSERT INTO users (nama, username, password, role) VALUES (?, ?, ?, ?)`;
+  db.run(sql, [nama, username, password, role], function(err) {
+    if (err) {
+      if (err.message.includes('UNIQUE constraint failed')) {
+        return res.status(400).json({ error: "Username sudah digunakan." });
+      }
+      return res.status(500).json({ error: err.message });
+    }
+    res.json({ success: true, message: "Akun berhasil dibuat." });
+  });
+});
+
+// 4. API: Login Account
+app.post('/api/login', (req, res) => {
+  const { username, password } = req.body;
+  if (!username || !password) {
+    return res.status(400).json({ error: "Username dan password diperlukan." });
+  }
+
+  db.get('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], (err, user) => {
+    if (err) return res.status(500).json({ error: err.message });
+    
+    if (user) {
+      res.json({ success: true, message: "Login berhasil.", user: { id: user.id, nama: user.nama, username: user.username, role: user.role } });
+    } else {
+      res.status(401).json({ error: "Username atau password salah." });
+    }
+  });
+});
 // Menjalankan Server Backend
 app.listen(PORT, () => {
   console.log(`===========================================`);

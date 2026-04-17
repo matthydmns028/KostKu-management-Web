@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KosKu Management - Penghuni Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <i class="fas fa-home"></i>
+        <h1>KosKu Management</h1>
+      </div>
+      <div class="navbar-user">
+        <i class="fas fa-user-circle"></i>
+        <span style="color: white; margin-right: 10px; font-weight: bold;">Penghuni</span>
+        <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
+      </div>
+    </header>
+
+    <div class="app-container">
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Menu Utama</h3>
+        <ul class="sidebar-menu">
+          <li class="active">
+            <a href="user-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+          </li>
+          <li>
+            <a href="user-pembayaran.html"><i class="fas fa-money-bill-wave"></i> Pembayaran</a>
+          </li>
+          <li>
+            <a href="user-pengaduan.html"><i class="fas fa-exclamation-circle"></i> Pengaduan</a>
+          </li>
+          <li>
+            <a href="user-notifikasi.html"><i class="fas fa-bell"></i> Notifikasi</a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header" style="justify-content: space-between;">
+          <h2>Dashboard</h2>
+          <span style="color: #666; font-size: 0.9rem;" id="currentDate">Sabtu, 29 November 2025</span>
+        </div>
+
+        <div class="dashboard-cards" style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <div class="card" style="flex: 1; border-left: 4px solid #007bff; display: flex; align-items: center; padding: 20px;">
+            <div style="background-color: #e6f0ff; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #007bff; font-size: 1.5rem; margin-right: 20px;">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+            <div>
+                <p style="color: #888; font-size: 0.8rem; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 1px;">Tanggal Masuk</p>
+                <h3 style="margin: 0 0 5px 0; font-size: 1.8rem; color: #007bff;">28/10/2025</h3>
+                <p style="color: #888; font-size: 0.85rem; margin: 0;">Tanggal menjadi penghuni</p>
+            </div>
+          </div>
+          
+          <div class="card" style="flex: 1; border-left: 4px solid #28a745; display: flex; align-items: center; padding: 20px;">
+            <div style="background-color: #e6f9ed; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #28a745; font-size: 1.5rem; margin-right: 20px;">
+                <i class="fas fa-hourglass-half"></i>
+            </div>
+            <div>
+                <p style="color: #888; font-size: 0.8rem; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 1px;">Status Pembayaran</p>
+                <h3 style="margin: 0 0 5px 0; font-size: 1.5rem; color: #28a745; padding-bottom: 5px;">Sudah Diverifikasi</h3>
+                <p style="color: #888; font-size: 0.85rem; margin: 0;"><i class="fas fa-check" style="color: #28a745;"></i> Status pembayaran bulan ini</p>
+            </div>
+          </div>
+
+          <div class="card" style="flex: 1; border-left: 4px solid #6c757d; display: flex; align-items: center; padding: 20px;">
+            <div style="background-color: #f8f9fa; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #6c757d; font-size: 1.5rem; margin-right: 20px;">
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div>
+                <p style="color: #888; font-size: 0.8rem; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 1px;">Jatuh Tempo Berikutnya</p>
+                <h3 style="margin: 0 0 5px 0; font-size: 1.8rem; color: #007bff;">28/1/2026</h3>
+                <p style="color: #888; font-size: 0.85rem; margin: 0;">Tanggal pembayaran</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+    <script>
+      // Update the current date exactly like the UI
+      const dateElement = document.getElementById("currentDate");
+      if(dateElement){
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = new Date().toLocaleDateString('id-ID', options);
+      }
+    </script>
+    <script src="auth.js"></script>
+  </body>
+</html>

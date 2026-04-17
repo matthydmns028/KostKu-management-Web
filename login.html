@@ -18,7 +18,7 @@
         <i class="fas fa-home login-icon"></i>
         <h2>Sistem Manajemen Kos-Kosan</h2>
       </div>
-      <form action="index.html" class="login-form">
+      <form id="loginForm" class="login-form">
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" id="username" placeholder="admin" required />
@@ -33,7 +33,10 @@
           />
         </div>
         <button type="submit" class="btn btn-primary login-btn">Login</button>
+        <div style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: #666;">
+          <p>Belum punya akun? <a href="register.html" style="color: #007bff; text-decoration: none; font-weight: 500;">Daftar di sini</a></p>
+        </div>
       </form>
     </div>
-  </body>
+  <script src="auth.js"></script></body>
 </html>
